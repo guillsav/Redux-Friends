@@ -1,48 +1,44 @@
-import {
-  FETCHING_FRIENDS_REQUEST,
-  FETCHING_FRIENDS_SUCCESS,
-  FETCHING_FRIENDS_FAILURE
-} from '../actions';
+import {LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE} from '../actions';
 
 import {initialState} from './intialState';
 
-export const friendsReducer = (state = initialState, action) => {
+export const loginReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCHING_FRIENDS_REQUEST:
+    case LOGIN_REQUEST:
       return {
         ...state,
-        isFetching: true,
-        deletingFriend: false,
-        deletingFriends: false,
-        savingFriends: false,
-        updatingFriend: false,
-        isAuthenticated: true
-      };
-    case FETCHING_FRIENDS_SUCCESS:
-      return {
-        ...state,
-        friends: action.payload,
-        isFetching: false,
+        loggingIn: true,
         error: null,
         deletingFriend: false,
         deletingFriends: false,
-        loggingIn: false,
         savingFriends: false,
         updatingFriend: false,
+        friends: [],
+        isAuthenticated: false
+      };
+    case LOGIN_SUCCESS:
+      return {
+        ...state,
+        loggingIn: false,
+        error: null,
+        deletingFriend: false,
+        deletingFriends: false,
+        savingFriends: false,
+        updatingFriend: false,
+        friends: [],
         isAuthenticated: true
       };
-    case FETCHING_FRIENDS_FAILURE:
+    case LOGIN_FAILURE:
       return {
         ...state,
         error: action.payload,
-        isFetching: false,
-        friends: [],
+        loggingIn: false,
         deletingFriend: false,
         deletingFriends: false,
-        loggingIn: false,
         savingFriends: false,
         updatingFriend: false,
-        isAuthenticated: true
+        friends: [],
+        isAuthenticated: false
       };
     default:
       return state;

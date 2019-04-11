@@ -1,16 +1,19 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Route} from 'react-router-dom';
+import Header from './components/Header';
+import PrivateRoute from './components/PrivateRoute';
 import LoginForm from './components/LoginForm';
+import FriendsList from './components/FriendsList';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Route path="/login" component={LoginForm} />
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className="App">
+      <Header />
+      <Route exact path="/login" component={LoginForm} />
+      <PrivateRoute exact path="/friends" component={FriendsList} />
+    </div>
+  );
+};
 
 export default App;
