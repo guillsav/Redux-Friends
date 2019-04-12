@@ -52,7 +52,7 @@ const LoginForm = props => {
           </div>
           <button>
             {props.loggingIn ? (
-              <Loader type="Oval" color="#fff" height={30} width={30} />
+              <Loader type="Oval" color="#fff" height={26} width={26} />
             ) : (
               'Log in'
             )}

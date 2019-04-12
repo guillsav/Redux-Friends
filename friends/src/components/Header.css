@@ -1,8 +1,16 @@
+.Header {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+}
+
 .Header header {
   background: rgb(213, 74, 49);
   color: #fff;
   font-size: 1.4rem;
   margin-bottom: 30px;
+  padding: 10px;
+  height: 90px;
 }
 
 .container {
@@ -11,6 +19,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.Header .Loader {
+  /*  */
+  margin-top: 50px;
 }
 
 header a {
