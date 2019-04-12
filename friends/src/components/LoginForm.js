@@ -47,7 +47,7 @@ const LoginForm = props => {
               type="password"
               name="password"
               value={credentials.password}
-              placeholder="Enter Username..."
+              placeholder="Enter Password..."
             />
           </div>
           <button>
