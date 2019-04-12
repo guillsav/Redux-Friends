@@ -18,5 +18,11 @@ header a {
   color: #fff;
   font-size: 1.6rem;
   font-weight: 600;
-  margin-left: 20px;
+  padding: 15px;
+  transition: all 0.1s;
+}
+
+header .active {
+  background: rgba(0, 0, 0, 0.181);
+  border-radius: 4px;
 }
