@@ -1,19 +1,21 @@
 import React from 'react';
-import {Route} from 'react-router-dom';
+import {Route, withRouter} from 'react-router-dom';
 import Header from './components/Header';
 import PrivateRoute from './components/PrivateRoute';
 import LoginForm from './components/LoginForm';
 import FriendsList from './components/FriendsList';
 import './App.css';
 
-const App = () => {
+const App = props => {
   return (
     <div className="App">
-      <Header />
+      <Header {...props} />
       <Route exact path="/login" component={LoginForm} />
       <PrivateRoute exact path="/friends" component={FriendsList} />
     </div>
   );
 };
 
-export default App;
+const AppWithRouter = withRouter(App);
+
+export default AppWithRouter;

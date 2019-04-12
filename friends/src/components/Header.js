@@ -7,9 +7,8 @@ import './Header.css';
 
 const Header = props => {
   const onLogout = () => {
-    props.logOutUser();
+    props.logOutUser().then(props.history.push('/login'));
   };
-
   return (
     <div className="Header">
       <header>
@@ -24,7 +23,7 @@ const Header = props => {
               <NavLink to="/friend/new-friend">Add Friend</NavLink>
             )}
             {props.isAuthenticated && (
-              <NavLink onClick={onLogout} to="/login">
+              <NavLink onClick={onLogout} to="#">
                 Log out
               </NavLink>
             )}
