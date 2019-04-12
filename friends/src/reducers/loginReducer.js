@@ -9,36 +9,24 @@ export const loginReducer = (state = initialState, action) => {
         ...state,
         loggingIn: true,
         error: null,
-        deletingFriend: false,
-        deletingFriends: false,
-        savingFriends: false,
-        updatingFriend: false,
-        friends: [],
-        isAuthenticated: false
+        isAuthenticated: false,
+        logingOut: false
       };
     case LOGIN_SUCCESS:
       return {
         ...state,
         loggingIn: false,
         error: null,
-        deletingFriend: false,
-        deletingFriends: false,
-        savingFriends: false,
-        updatingFriend: false,
-        friends: [],
-        isAuthenticated: true
+        isAuthenticated: true,
+        logingOut: false
       };
     case LOGIN_FAILURE:
       return {
         ...state,
         error: action.payload,
         loggingIn: false,
-        deletingFriend: false,
-        deletingFriends: false,
-        savingFriends: false,
-        updatingFriend: false,
-        friends: [],
-        isAuthenticated: false
+        isAuthenticated: false,
+        logingOut: false
       };
     default:
       return state;

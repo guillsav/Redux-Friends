@@ -9,3 +9,4 @@ export {
 
 export {fetchFriends} from './fetchFriends';
 export {logUser} from './logUser';
+export {logOutUser} from './logOutUser';

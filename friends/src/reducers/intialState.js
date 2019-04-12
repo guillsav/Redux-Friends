@@ -7,5 +7,6 @@ export const initialState = {
   loggingIn: false,
   savingFriends: false,
   updatingFriend: false,
-  isAuthenticated: false
+  isAuthenticated: false,
+  logingOut: false
 };

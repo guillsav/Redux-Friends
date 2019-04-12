@@ -1,10 +1,15 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {NavLink} from 'react-router-dom';
+import {logOutUser} from '../actions';
 
 import './Header.css';
 
 const Header = props => {
+  const onLogout = () => {
+    props.logOutUser();
+  };
+
   return (
     <div className="Header">
       <header>
@@ -17,6 +22,11 @@ const Header = props => {
             {props.isAuthenticated && <NavLink to="/friends">Friends</NavLink>}
             {props.isAuthenticated && (
               <NavLink to="/friend/new-friend">Add Friend</NavLink>
+            )}
+            {props.isAuthenticated && (
+              <NavLink onClick={onLogout} to="/login">
+                Log out
+              </NavLink>
             )}
           </nav>
         </div>
@@ -33,5 +43,5 @@ const mapStateToProps = ({loginReducer}) => {
 
 export default connect(
   mapStateToProps,
-  {}
+  {logOutUser}
 )(Header);

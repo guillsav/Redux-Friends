@@ -11,12 +11,11 @@ export const friendsReducer = (state = initialState, action) => {
     case FETCHING_FRIENDS_REQUEST:
       return {
         ...state,
+        friends: [],
         isFetching: true,
-        deletingFriend: false,
-        deletingFriends: false,
-        savingFriends: false,
-        updatingFriend: false,
-        isAuthenticated: true
+        error: null,
+        isAuthenticated: true,
+        logingOut: false
       };
     case FETCHING_FRIENDS_SUCCESS:
       return {
@@ -24,12 +23,8 @@ export const friendsReducer = (state = initialState, action) => {
         friends: action.payload,
         isFetching: false,
         error: null,
-        deletingFriend: false,
-        deletingFriends: false,
-        loggingIn: false,
-        savingFriends: false,
-        updatingFriend: false,
-        isAuthenticated: true
+        isAuthenticated: true,
+        logingOut: false
       };
     case FETCHING_FRIENDS_FAILURE:
       return {
@@ -37,12 +32,8 @@ export const friendsReducer = (state = initialState, action) => {
         error: action.payload,
         isFetching: false,
         friends: [],
-        deletingFriend: false,
-        deletingFriends: false,
-        loggingIn: false,
-        savingFriends: false,
-        updatingFriend: false,
-        isAuthenticated: true
+        isAuthenticated: true,
+        logingOut: false
       };
     default:
       return state;
