@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import Friend from './Friend';
 import {fetchFriends} from '../actions';
 
+import './FriendsList.css';
+
 const FriendsList = props => {
   useEffect(() => {
     props.fetchFriends();

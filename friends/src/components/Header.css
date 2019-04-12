@@ -1,0 +1,22 @@
+.Header header {
+  background: rgb(213, 74, 49);
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-left: 20px;
+}

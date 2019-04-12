@@ -1,6 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import {connect} from 'react-redux';
 import {logUser} from '../actions';
+import Loader from 'react-loader-spinner';
 
 import './LoginForm.css';
 
@@ -49,14 +50,26 @@ const LoginForm = props => {
               placeholder="Enter Username..."
             />
           </div>
-          <button>Login</button>
+          <button>
+            {props.loggingIn ? (
+              <Loader type="Oval" color="#fff" height={30} width={30} />
+            ) : (
+              'Log in'
+            )}
+          </button>
         </div>
       </form>
     </Fragment>
   );
 };
 
+const mapStateToProps = ({loginReducer}) => {
+  return {
+    loggingIn: loginReducer.loggingIn
+  };
+};
+
 export default connect(
-  null,
+  mapStateToProps,
   {logUser}
 )(LoginForm);
