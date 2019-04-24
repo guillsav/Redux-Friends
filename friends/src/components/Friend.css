@@ -1,0 +1,27 @@
+.Friend {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  padding: 30px;
+  padding-top: 10px;
+  border-radius: 10px;
+  background: #fff;
+  width: 340px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  text-align: left;
+  font-size: 1.6rem;
+  box-shadow: 0 5px 0 rgba(176, 144, 144, 0.126);
+}
+
+.Friend h2 {
+  padding-top: 0px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed rgba(176, 144, 144, 0.242);
+}
+
+.Friend span {
+  font-weight: 700;
+  color: rgb(213, 74, 49);
+}

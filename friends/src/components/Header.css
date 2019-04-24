@@ -1,0 +1,41 @@
+.Header {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+}
+
+.Header header {
+  background: rgb(213, 74, 49);
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  padding: 10px;
+  height: 90px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header .Loader {
+  /*  */
+  margin-top: 50px;
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 15px;
+  transition: all 0.1s;
+}
+
+header .active {
+  background: rgba(0, 0, 0, 0.181);
+  border-radius: 4px;
+}
